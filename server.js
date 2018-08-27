@@ -1,6 +1,27 @@
 const express = require('express');
+const mysql = require('mysql');
+
 
 const app = express();
+
+
+var connexion = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: "",
+    database: "crf_conso"
+})
+
+const PERSONNES_QUERY = "SELECT * FROM utilisateurs";
+
+connexion.connect(function(err){
+    if(err) throw err;
+    console.log("Connected!");
+    connexion.query(PERSONNES_QUERY, function (err, res){
+        if(err) throw err;
+        console.log(res);
+    })
+});
 
 app.get('/api/personnes', (req,res) => {
     const personnes = [
