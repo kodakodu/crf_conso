@@ -13,41 +13,48 @@ var connexion = mysql.createConnection({
 })
 
 const PERSONNES_QUERY = "SELECT * FROM utilisateurs";
+const POSTES_QUERY = "SELECT * FROM postes";
+const CONSO_QUERY = "SELECT * FROM liste_conso";
 
 connexion.connect(function(err){
-    if(err) throw err;
+    if(err) {
+        console.error(err);
+        return;    
+    }
     console.log("Connected!");
     connexion.query(PERSONNES_QUERY, function (err, res){
         if(err) throw err;
         console.log(res);
-    })
+    });
+
+    connexion.query(POSTES_QUERY, function (err, res){
+        if(err) throw err;
+        console.log(res);
+    });
 });
 
 app.get('/api/personnes', (req,res) => {
-    const personnes = [
-        {id: 1, firstName: 'Pierre', lastName: 'Lafond'},
-        {id: 2, firstName: 'Yann', lastName: 'Underwood'},
-        {id: 3, firstName: 'Marie-laure', lastName: 'Arnaud'}
-    ];
-    res.json(personnes);
+            connexion.query(PERSONNES_QUERY, function (err, rows){
+                if(err) throw err;
+                console.log(rows);
+                res.send(rows);
+            });
 });
 
 app.get('/api/conso', (req,res) => {
-    const conso = [
-        {id: 1, nom: 'Compresses 10x10', description: 'bla bla'},
-        {id: 2, nom: 'Poche de glasse', description: 'bla bla'},
-        {id: 3, nom: 'Pansement 5x5', description: 'bla bla'}
-    ];
-    res.json(conso);
+    connexion.query(CONSO_QUERY, function (err, rows){
+        if(err) throw err;
+        console.log(rows);
+        res.send(rows);
+    });
 });
 
 app.get('/api/postes', (req,res) => {
-    const postes = [
-        {id: 1, nom: 'Fete de la ville de yerres', date: '23/08/2018', description: 'bla bla'},
-        {id: 2, nom: 'Guinguettes Yerres', date: '26/08/2018', description: 'bla bla'},
-        {id: 3, nom: 'Championnat football brunoy', date: '19/08/2018', description: 'bla bla'}
-    ];
-    res.json(postes);
+    connexion.query(POSTES_QUERY, function (err, rows){
+        if(err) throw err;
+        console.log(rows);
+        res.send(rows);
+    });
 });
 
 app.get('/api/poste_conso', (req,res) => {
