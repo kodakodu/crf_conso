@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 import Navbar from './components/navbar';
+import PostesList from './components/PostesList';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ class App extends Component {
     return (
       <div>
         <Navbar/>
+        <PostesList/>
       <div container>
         
         <Grid container spacing={24} style={{marginTop:'100px'}}>
@@ -27,18 +29,18 @@ class App extends Component {
             <Grid item xs>
               
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={6}>
               <Paper>
               <Typography variant='subheading' style={{marginLeft:'10px;'}}>Liste des postes</Typography>    
                 <GridList cellHeight={180}>
-                  <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">Poste 1 Lorem ipsum dolor sit amet, consectetur<Button variant="contained" color="primary">go</Button></ListSubheader>
+                  <GridListTile key="Subheader" cols={1} style={{ height: 'auto' }}>
+                    <ListSubheader component="div">Poste 1 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
                   </GridListTile>
-                  <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">Poste 2 Lorem ipsum dolor sit amet, consectetur<Button variant="contained" color="primary">go</Button></ListSubheader>
+                  <GridListTile key="Subheader" cols={1} style={{ height: 'auto' }}>
+                    <ListSubheader component="div">Poste 2 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
                   </GridListTile>
-                  <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">Poste 3 Lorem ipsum dolor sit amet, consectetur<Button variant="contained" color="primary">go</Button></ListSubheader>
+                  <GridListTile key="Subheader" cols={1} style={{ height: 'auto' }}>
+                    <ListSubheader component="div">Poste 3 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
                   </GridListTile>
                 </GridList>
 

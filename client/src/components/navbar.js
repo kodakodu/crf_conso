@@ -8,9 +8,9 @@ class navbar extends Component {
   render() {
     return (
       <div>
-      <AppBar position="static" color="default">
+      <AppBar position="static">
         <Toolbar>
-          <Typography variant="display1" gutterBottom>
+          <Typography variant="display1" gutterBottom color="inherit">
             CRF Tracker 1.0 //
           </Typography>
           {/* <Typography variant="body1" color="inherit" gutterBottom>
