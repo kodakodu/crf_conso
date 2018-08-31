@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import Card from '@material-ui/core/Card';
 import Navbar from './components/navbar';
 import PostesList from './components/PostesList';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import './App.css';
 
@@ -22,7 +17,7 @@ class App extends Component {
       <div>
         <Navbar/>
         <PostesList/>
-      <div container>
+      <div container="true">
         
         <Grid container spacing={24} style={{marginTop:'100px'}}>
           <Grid container spacing={24}>
@@ -31,15 +26,15 @@ class App extends Component {
             </Grid>
             <Grid item xs={6}>
               <Paper>
-              <Typography variant='subheading' style={{marginLeft:'10px;'}}>Liste des postes</Typography>    
+              <Typography variant='subheading' style={{marginLeft:'10px'}}>Liste des postes</Typography>    
                 <GridList cellHeight={180}>
-                  <GridListTile key="Subheader" cols={1} style={{ height: 'auto' }}>
+                  <GridListTile key="Subheader1" cols={1} style={{ height: 'auto' }}>
                     <ListSubheader component="div">Poste 1 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
                   </GridListTile>
-                  <GridListTile key="Subheader" cols={1} style={{ height: 'auto' }}>
+                  <GridListTile key="Subheader2" cols={1} style={{ height: 'auto' }}>
                     <ListSubheader component="div">Poste 2 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
                   </GridListTile>
-                  <GridListTile key="Subheader" cols={1} style={{ height: 'auto' }}>
+                  <GridListTile key="Subheader3" cols={1} style={{ height: 'auto' }}>
                     <ListSubheader component="div">Poste 3 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
                   </GridListTile>
                 </GridList>

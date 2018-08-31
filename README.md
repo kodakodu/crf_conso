@@ -10,6 +10,7 @@ pm2 start server.js ==> demarrage
 
 pm2 stop server.js ==> stoper
 
-Ces commandes sont a lancer dans le repertoire de l'application nodejs
+Ces commandes sont à lancer dans le repertoire de l'application nodejs
 
+Test en cours de npm install cors
 
