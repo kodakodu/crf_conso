@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 //import TexField from '@material-ui/core/TextField';
 import { Typography } from '@material-ui/core';
 import Axios from 'axios';
-import Moment from 'react-moment';
-
+import Poste from './Poste';
 
 class PostesList extends Component{
 
@@ -61,11 +60,11 @@ componentDidMount(){
 render(){
     return(
     <div>
-        <Typography >composant PostesList</Typography>
-        <ul>
-        { this.state.postes.map(poste => <li>{poste.titre} - <Moment format="DD-MM-YYYY">poste.date</Moment></li>)}
-      </ul>
-
+        {this.state.postes ? (
+            <div>
+                         { this.state.postes.map(poste => <Poste poste={poste}></Poste>)}
+            </div>
+        ) : "Pas de postes en cours"}
     </div>
     )
 }

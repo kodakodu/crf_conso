@@ -17,37 +17,6 @@ class App extends Component {
       <div>
         <Navbar/>
         <PostesList/>
-      <div container="true">
-        
-        <Grid container spacing={24} style={{marginTop:'100px'}}>
-          <Grid container spacing={24}>
-            <Grid item xs>
-              
-            </Grid>
-            <Grid item xs={6}>
-              <Paper>
-              <Typography variant='subheading' style={{marginLeft:'10px'}}>Liste des postes</Typography>    
-                <GridList cellHeight={180}>
-                  <GridListTile key="Subheader1" cols={1} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">Poste 1 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
-                  </GridListTile>
-                  <GridListTile key="Subheader2" cols={1} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">Poste 2 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
-                  </GridListTile>
-                  <GridListTile key="Subheader3" cols={1} style={{ height: 'auto' }}>
-                    <ListSubheader component="div">Poste 3 Lorem ipsum dolor sit amet, consectetur <Button variant="contained" color="primary">go</Button></ListSubheader>
-                  </GridListTile>
-                </GridList>
-
-              </Paper>
-            </Grid>
-            <Grid item xs>
-              
-            </Grid>      
-          </Grid>
-        </Grid>
-        
-        </div>
     </div>
     );
   }
