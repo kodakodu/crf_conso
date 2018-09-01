@@ -10,16 +10,16 @@ const Poste = (props) => {
 return(
     <div>
         {props.poste ? (
-               <Card>
-               <CardContent>
-                   <Typography gutterBottom variant="headline" component="h2">
+               <Card style={{height:'250px',margin:'50px'}}>
+               <CardContent style={{float:'left'}}>
+                   <Typography gutterBottom variant="headline" component="h2" style={{backgroundColor:'lightgray'}}>
                        {props.poste.titre}
                    </Typography>
-                   <Typography component="p">
+                   <Typography component="p" style={{width:'250px'}}>
                        {props.poste.description}
                    </Typography>
                </CardContent>
-               <CardActions>
+               <CardActions style={{float:'right'}}>
                    <Button variant="contained" size="medium" color="secondary" href={props.poste.date} target="_blank">
                        Ouvrir
                    </Button>
