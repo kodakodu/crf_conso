@@ -13,7 +13,7 @@ var connexion = mysql.createConnection({
 })
 
 const PERSONNES_QUERY = "SELECT * FROM utilisateurs";
-const POSTES_QUERY = "SELECT * FROM postes";
+const POSTES_QUERY = "SELECT * FROM postes ORDER BY date ASC";
 const CONSO_QUERY = "SELECT * FROM liste_conso";
 
 connexion.connect(function(err){

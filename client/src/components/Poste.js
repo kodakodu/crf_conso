@@ -17,7 +17,7 @@ return(
                    </Typography>
                    <Typography variant="headline" gutterBottom>{Moment(props.poste.date).utc().format('DD-MM-YYYY')}
                    </Typography>
-                   <Typography component="p" style={{width:'250px'}}>
+                   <Typography variant="body1" style={{width:'250px'}}>
                        {props.poste.description}
                    </Typography>
                    
