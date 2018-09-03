@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-//import Grid from '@material-ui/core/Grid';
-//import TexField from '@material-ui/core/TextField';
-import { Typography } from '@material-ui/core';
 import Axios from 'axios';
 import Poste from './Poste';
 
@@ -20,16 +17,11 @@ constructor(){
 }
 
 getPostes = () => {
-    console.log("test depuis getPostes()");
-
     Axios.get('http://vps313166.ovh.net:5000/api/postes')
     .then(response => {
         const postes = response.data;
         this.setState({ postes});
     })
-    // fetch('http://vps313166.ovh.net:5000/api/postes')
-    // .then(response => response.json())
-    // .then(response => this.setState({ postes: response}));    
 }
 
 
@@ -62,7 +54,7 @@ render(){
     <div>
         {this.state.postes ? (
             <div>
-                         { this.state.postes.map(poste => <Poste poste={poste}></Poste>)}
+                         { this.state.postes.map(poste => <Poste poste={poste} key={poste.poste_id}></Poste>)}
             </div>
         ) : "Pas de postes en cours"}
     </div>

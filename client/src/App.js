@@ -1,24 +1,35 @@
 import React, { Component } from 'react';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Navbar from './components/navbar';
 import PostesList from './components/PostesList';
-import Button from '@material-ui/core/Button';
-
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import Saisie from './components/Saisie';
+//import Main from './components/Main';
+import {  Switch, Route } from 'react-router-dom';
 import './App.css';
+
+const test = () => {
+  return(
+   <div>
+    <p>Nouvelle route</p>
+  </div>
+  )
+}
 
 class App extends Component {
   render() {
+
     return (
+
       <div>
         <Navbar/>
-        <PostesList/>
+        <Main/>
     </div>
     );
   }
 }
+const Main = () => (
+  <Switch>
+      <Route exact path='/' component={PostesList}></Route>
+      <Route exact path='/saisie' component={Saisie}></Route>
+  </Switch>
+);
 export default App;
