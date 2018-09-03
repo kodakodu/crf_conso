@@ -10,7 +10,7 @@ const Poste = (props) => {
 return(
     <div>
         {props.poste ? (
-               <Card style={{height:'250px',margin:'50px'}}>
+               <Card style={{height:'300px',margin:'50px'}}>
                <CardContent style={{float:'left'}}>
                    <Typography gutterBottom variant="display1" component="h2" style={{backgroundColor:'lightgray'}}>
                        {props.poste.titre}
