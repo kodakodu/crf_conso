@@ -5,8 +5,11 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Moment from 'moment';
+import { Route, Link } from 'react-router-dom';
+import Saisie from './Saisie';
 
 const Poste = (props) => {
+    <Route exact path='/saisie' component={Saisie}></Route>
 return(
     <div>
         {props.poste ? (
@@ -23,7 +26,7 @@ return(
                    
                </CardContent>
                <CardActions style={{float:'right'}}>
-                   <Button variant="contained" size="medium" color="secondary" href={props.poste.date} target="_blank">
+                   <Button variant="contained" size="medium" color="secondary" component={Link} to="/Saisie">
                        Ouvrir
                    </Button>
                </CardActions>

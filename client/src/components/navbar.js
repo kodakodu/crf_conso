@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { NavLink, Switch, Route } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './navbar.css';
 
 class navbar extends Component {

@@ -6,13 +6,6 @@ import Saisie from './components/Saisie';
 import {  Switch, Route } from 'react-router-dom';
 import './App.css';
 
-const test = () => {
-  return(
-   <div>
-    <p>Nouvelle route</p>
-  </div>
-  )
-}
 
 class App extends Component {
   render() {
