@@ -58,7 +58,7 @@ render(){
             </div>
         ) : "Pas de postes en cours"}
     </div>
-    )
+    );
 }
 }
 export default PostesList;
