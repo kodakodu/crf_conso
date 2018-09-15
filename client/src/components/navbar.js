@@ -8,23 +8,10 @@ import './navbar.css';
 class navbar extends Component {
   render() {
     return (
-      <div>
-    
-      <AppBar position="static">
-        <Toolbar>
-          {/* <NavLink exact style={{textDecoration:'none',color:'white'}} to='/'> */}
-          <Link to="/" style={{color: 'white', textDecoration:'none'}}><Typography variant="display1" gutterBottom color="inherit">
-              CRF Tracker 1.0 //
-            </Typography>
-          </Link>
-            
-          {/* </NavLink> */}
-          {/* <Typography variant="body1" color="inherit" gutterBottom>
-              Croix-rouge - Unité locale du Val d'Yerres
-          </Typography> */}
-        </Toolbar>
-      </AppBar>
-    </div>
+            <nav className="navbar navbar-dark" style={{backgroundColor: '#3f51b5'}}>
+              <a className="navbar-brand" href="/"><h2>CRF Tracker 1.0 //</h2></a>
+            </nav>
+
     );
   }
 }
