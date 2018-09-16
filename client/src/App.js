@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar';
-import PostesList from './components/PostesList';
-import Saisie from './components/Saisie';
-//import Main from './components/Main';
+import PostesList from './components/postes-list';
+import Saisie from './components/saisie';
 import {  Switch, Route } from 'react-router-dom';
 import './App.css';
 
