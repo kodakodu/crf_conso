@@ -88,7 +88,7 @@ return(
         {this.props.poste ? (
             <div className="container">
               <div className="row">
-              <div className="col-sm-6 col-md-8 col-lg-3 mt-4">
+              <div className="col-sm-6 col-md-8 col-lg-8 mt-4">
                 <div className="card">
                     <img className="card-img-top" src="http://localhost:3000/img/Poste-de-secours.jpg"/>
                     <div className="card-block">

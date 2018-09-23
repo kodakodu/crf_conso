@@ -8,7 +8,7 @@ app.use(cors());
 var connexion = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: "password",
+    password: "",
     database: "crf_conso"
 })
 

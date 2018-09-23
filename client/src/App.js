@@ -21,7 +21,7 @@ class App extends Component {
 const Main = () => (
   <Switch>
       <Route exact path='/' component={PostesList}></Route>
-      <Route exact path='/saisie' component={Saisie}></Route>
+      <Route exact path={'/saisie'} component={Saisie}></Route>
   </Switch>
 );
 export default App;
